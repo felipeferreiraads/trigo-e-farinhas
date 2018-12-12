@@ -427,8 +427,7 @@ textarea {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Avenir' , sans-serif;
-  font-size: 18px;
+  font-family: 'Montserrat' , sans-serif;
   overflow-x: hidden;
 }
 a {
@@ -456,6 +455,14 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 figure {
   margin: 0;
@@ -595,12 +602,58 @@ figure {
     transform: rotate(359deg);
   }
 }
+footer {
+  background-image: linear-gradient(296deg, #db6344, #ef4b22);
+  padding-top: 100px;
+}
+footer .container {
+  max-width: 1150px;
+}
+footer .grid {
+  border-top: 1px solid #fff;
+  padding: 50px 10% 0 5%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .logo {
+  flex-basis: 20%;
+}
+footer .logo img {
+  max-width: 100%;
+}
+footer .menu {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .menu nav {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+footer .menu h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+footer .menu a {
+  margin-bottom: 15px;
+}
+footer .bottom {
+  padding: 100px 0 30px;
+}
+footer .bottom p {
+  text-align: center;
+  color: #fff;
+}
 header {
   width: 100%;
   height: 100px;
   background: #fff;
   box-shadow: 0 2px 10px 0 rgba(0,0,0,0.5);
   z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 header .container {
   height: 100%;
@@ -626,7 +679,7 @@ header .menu a {
   font-size: 16px;
   color: #ef4b22;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
 }
 .banner {
   width: 150%;
@@ -643,6 +696,7 @@ header .menu a {
   display: flex;
   justify-content: center;
   padding-bottom: 150px;
+  margin-top: 100px;
 }
 .banner .overlay {
   width: 100%;
@@ -666,7 +720,7 @@ header .menu a {
   justify-content: center;
 }
 .banner h1 {
-  font-size: 45px;
+  font-size: 40px;
   color: #fff;
   margin-bottom: 50px;
 }
@@ -729,6 +783,72 @@ header .menu a {
   color: #ef4b22;
   font-weight: bold;
 }
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+.contact h2 {
+  font-size: 35px;
+  color: #ef4b22;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.contact::after {
+  width: 200%;
+  height: 2000px;
+  content: '';
+  background-image: linear-gradient(296deg, #db6344, #ef4b22);
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 41%;
+  z-index: 0;
+}
+.contact form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 25px;
+  background: #fff;
+  box-shadow: 0 2px 10px 0 rgba(162,162,162,0.5);
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+}
+.contact form > *:not(:last-child) {
+  margin-bottom: 25px;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  padding: 0 20px;
+  color: #989898;
+}
+.contact form input.half,
+.contact form textarea.half {
+  width: 49%;
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  opacity: 1;
+}
+.contact form textarea {
+  height: 135px;
+  padding: 20px;
+}
+.contact form .submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .section-home .grid {
   min-height: 550px;
   display: flex;
@@ -737,7 +857,7 @@ header .menu a {
   flex-direction: row-reverse;
 }
 .section-home .image {
-  flex-basis: 500px;
+  flex-basis: 40%;
   overflow: hidden;
 }
 .section-home .image img {
@@ -757,7 +877,7 @@ header .menu a {
 .section-home .text.gradient {
   background-image: linear-gradient(296deg, #db6344, #ef4b22);
 }
-.section-home .text.gradient > * {
+.section-home .text.gradient > *:not(.button) {
   color: #fff !important;
 }
 .section-home .text h2 {
@@ -783,6 +903,10 @@ header .menu a {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   display: block;
   text-align: center;
+  transition: 0.2s;
+}
+.button:hover {
+  opacity: 0.8;
 }
 .button.white {
   background: #fff;
@@ -793,7 +917,7 @@ header .menu a {
   top: -200px;
 }
 .newsletters h2 {
-  font-size: 35px;
+  font-size: 30px;
   color: #fff;
   text-align: center;
   margin-bottom: 80px;
@@ -842,5 +966,6 @@ header .menu a {
   color: #fff;
   font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.min.css.map */
